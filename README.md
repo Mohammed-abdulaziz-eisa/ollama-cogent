@@ -13,6 +13,7 @@ ollama-cogent/
 ├── app_deepseekr1:1.5b.py      # Basic completion with DeepSeek-R1 1.5B model
 ├── app_llama3.2:latest_gradio.py  # Interactive Gradio UI for Llama 3.2
 └── app_llama3.2:latest_streaming.py  # Streaming implementation with Llama 3.2
+└── app_deepseekr1:1.5b_streamlit.py # Interactive Streamlit UI with DeepSeek-R1 1.5B
 ```
 
 ## Features
@@ -48,6 +49,17 @@ ollama-cogent/
 - Thought process formatting
 - Queue management for multiple users
 
+
+### DeepSeek-R1 1.5B Streamlit Interface
+`app_deepseekr1:1.5b_streamlit.py` provides a web-based chat interface with:
+- Setting up the Streamlit page title
+- Initializing chat history in session state
+- Displaying chat input and chat history
+- Handling new user inputs and displaying user messages
+- Streaming responses from the DeepSeek-R1 1.5B model using the Ollama API
+- Processing and displaying the streaming response in real-time
+- Adding assistant responses to the chat history
+
 ## Prerequisites
 
 - Python 3.9+
@@ -56,6 +68,7 @@ ollama-cogent/
   ```
   ollama
   gradio
+  streamlit
   ```
 
 ## Installation
@@ -91,6 +104,11 @@ Access the interface at `http://localhost:7860`
 python3 app_llama3.2:latest_streaming.py
 ```
 
+### Interactive Streamlit Interface
+```bash
+streamlit run app_deepseekr1:1.5b_streamlit.py
+```
+
 ## Best Practices Implemented
 
 - Structured error handling
@@ -114,3 +132,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - Ollama team for providing the API
 - Gradio team for the UI framework
 - DeepSeek and Llama model creators
+- Streamlit team for the web framework
