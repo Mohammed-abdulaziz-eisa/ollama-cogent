@@ -1,0 +1,11 @@
+bitsandbytes==0.42.0
+datasets==3.2.0
+gradio==5.14.0
+loguru==0.7.3
+ollama==0.4.7
+pandas==2.2.3
+peft==0.14.0
+swanlab==0.4.5
+torch==2.5.1
+tqdm==4.66.5
+transformers==4.48.0
