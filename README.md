@@ -14,6 +14,7 @@ ollama-cogent/
 ├── app_llama3.2:latest_gradio.py  # Interactive Gradio UI for Llama 3.2
 └── app_llama3.2:latest_streaming.py  # Streaming implementation with Llama 3.2
 └── app_deepseekr1:1.5b_streamlit.py # Interactive Streamlit UI with DeepSeek-R1 1.5B
+└── app_llama3.2:latest_chainlit.py # Interactive Chainlit UI with Llama 3.2
 ```
 
 ## Features
@@ -60,6 +61,17 @@ ollama-cogent/
 - Processing and displaying the streaming response in real-time
 - Adding assistant responses to the chat history
 
+### Llama 3.2 Chainlit Interface
+`app_llama3.2:latest_chainlit.py` provides a web-based chat interface with:
+
+#### Features
+- Setting up Chainlit for a chat interface
+- Initializing chat history
+- Handling user messages
+- Streaming responses from the Llama 3.2 model
+- Real-time response display
+- Updating messages dynamically
+
 ## Prerequisites
 
 - Python 3.9+
@@ -69,6 +81,7 @@ ollama-cogent/
   ollama
   gradio
   streamlit
+  chainlit
   ```
 
 ## Installation
@@ -108,6 +121,12 @@ python3 app_llama3.2:latest_streaming.py
 ```bash
 streamlit run app_deepseekr1:1.5b_streamlit.py
 ```
+
+### Interactive Chainlit Interface
+```bash
+chainlit run app_llama3.2:latest_chainlit.py -w 
+```
+The `-w` flag enables auto-reloading in Chainlit, eliminating the need to restart the server after each change to your application. Your chatbot UI will be accessible at `http://localhost:8000`.
 
 ## Best Practices Implemented
 
