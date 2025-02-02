@@ -10,12 +10,11 @@ This repository provides production-ready examples of integrating Ollama with di
 
 ```
 ollama-cogent/
-├── app_deepseekr1:1.5b.py      # Basic completion with DeepSeek-R1 1.5B model
+├── app_deepseek-r1:8b.py     # Basic completion with DeepSeek-R1 8B model
 ├── app_llama3.2:latest_gradio.py  # Interactive Gradio UI for Llama 3.2
 └── app_llama3.2:latest_streaming.py  # Streaming implementation with Llama 3.2
-└── app_deepseekr1:1.5b_streamlit.py # Interactive Streamlit UI with DeepSeek-R1 1.5B
-└── app_llama3.2:latest_chainlit.py # Interactive Chainlit UI with Llama 3.2
-```
+└── app_deepseek-r1:8b_streamlit.py # Interactive Streamlit UI with DeepSeek-R1 8B
+└── app_deepseek-r1:8b_chainlit.py # Interactive Chainlit UI with DeepSeek-R1 8B
 
 ## Features
 
@@ -28,8 +27,8 @@ ollama-cogent/
 
 ## Implementation Details
 
-### DeepSeek-R1 1.5B Implementation
-`app_deepseekr1:1.5b.py` a basic completion setup with the DeepSeek-R1 1.5B model, featuring:
+### DeepSeek-R1 8B Implementation
+`app_deepseekr1:8b.py` a basic completion setup with the DeepSeek-R1 8B model, featuring:
 - Direct message content access
 - Thought process visualization
 - Structured response formatting
@@ -51,24 +50,24 @@ ollama-cogent/
 - Queue management for multiple users
 
 
-### DeepSeek-R1 1.5B Streamlit Interface
-`app_deepseekr1:1.5b_streamlit.py` provides a web-based chat interface with:
+### DeepSeek-R1 8B Streamlit Interface
+`app_deepseek-r1:8b_streamlit.py` provides a web-based chat interface with:
 - Setting up the Streamlit page title
 - Initializing chat history in session state
 - Displaying chat input and chat history
 - Handling new user inputs and displaying user messages
-- Streaming responses from the DeepSeek-R1 1.5B model using the Ollama API
+- Streaming responses from the DeepSeek-R1 8B model using the Ollama API
 - Processing and displaying the streaming response in real-time
 - Adding assistant responses to the chat history
 
-### Llama 3.2 Chainlit Interface
-`app_llama3.2:latest_chainlit.py` provides a web-based chat interface with:
+### DeepSeek-R1 8B Chainlit Interface
+`app_deepseek-r1:8b_chainlit.py` provides a web-based chat interface with:
 
 #### Features
 - Setting up Chainlit for a chat interface
 - Initializing chat history
 - Handling user messages
-- Streaming responses from the Llama 3.2 model
+- Streaming responses from the DeepSeek-R1 8B model
 - Real-time response display
 - Updating messages dynamically
 
@@ -103,7 +102,7 @@ pip install -r requirements.txt
 
 ### Basic Completion with DeepSeek-R1
 ```bash
-python3 app_deepseekr1:1.5b.py
+python3 app_deepseek-r1:8b.py
 ```
 
 ### Interactive Chat Interface
@@ -119,12 +118,12 @@ python3 app_llama3.2:latest_streaming.py
 
 ### Interactive Streamlit Interface
 ```bash
-streamlit run app_deepseekr1:1.5b_streamlit.py
+streamlit run app_deepseek-r1:8b_streamlit.py
 ```
 
 ### Interactive Chainlit Interface
 ```bash
-chainlit run app_llama3.2:latest_chainlit.py -w 
+chainlit run app_deepseek-r1:8b_chainlit.py -w 
 ```
 The `-w` flag enables auto-reloading in Chainlit, eliminating the need to restart the server after each change to your application. Your chatbot UI will be accessible at `http://localhost:8000`.
 
